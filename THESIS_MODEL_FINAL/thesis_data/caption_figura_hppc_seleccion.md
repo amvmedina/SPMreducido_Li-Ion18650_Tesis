@@ -1,0 +1,3 @@
+# Pie de figura propuesto
+
+Calibración con datos HPPC y validación reservada a bajo estado de carga. (a) Voltaje medido durante el ensayo HPPC completo; los marcadores identifican el inicio de los pulsos empleados en calibración (SOC inicial ≥ 1/3) y de los pulsos reservados para validación (SOC inicial < 1/3). (b) Pulso 2C representativo de la región de calibración. (c) Pulso 2C representativo de la región reservada para validación, que no participó en el ajuste. (d) Comparación del error por fase calculado sobre todos los pulsos de cada región. Los parámetros se mantuvieron sin reajuste durante la validación a bajo SOC.

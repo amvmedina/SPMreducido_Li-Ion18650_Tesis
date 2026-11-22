@@ -1,0 +1,12 @@
+parameter_or_component,information_required,information_available,identifiable_here,reason
+Q_cell,complete charge/discharge throughput,complete clean discharge and recharge counters; Q_ref=2.8999 Ah,YES,Capacity is directly supported in capacity coordinates without measured time.
+OCP / equilibrium-voltage representation,"near-equilibrium low-rate or rested voltage across SOC, preferably both directions",loaded 1C discharge and CC-CV charge only,NO,"Loaded terminal voltage mixes equilibrium voltage, resistance, kinetics, diffusion, and directional effects."
+stoichiometric windows,cell-compatible electrode OCPs plus independent capacity/electrode constraints,cell capacity and loaded full-cell voltage only,NO,Many electrode windows can generate similar full-cell voltage; no electrode reference is available.
+Q_n / Q_p grouped state capacities,Q_cell plus defensible electrode stoichiometric window widths,Q_cell is measured; electrode window widths are not identified,NO,The Panasonic Q_n/Q_p values cannot be rescaled uniquely from cell capacity alone.
+R0,time-resolved current step and immediate voltage response with fixture contribution characterized,adjacent-record R_app only; no measured sampling time,CONDITIONAL DIAGNOSTIC ONLY,"R_app contains cell, fixture, wiring, timing, and fast polarization contributions and is not intrinsic R0."
+alpha_n,measured-time relaxation/transient excitation with electrode separation,sustained 1C branch; provisional time only,NO,No measured timebase or electrode-specific excitation.
+alpha_p,measured-time relaxation/transient excitation with electrode separation,sustained 1C branch; provisional time only,NO,No measured timebase or electrode-specific excitation.
+d_n,time-resolved kinetic/polarization information over SOC,loaded curve with static/dynamic effects confounded,NO,"Cannot separate negative kinetics from OCP, positive kinetics, diffusion, and setup effects."
+d_p,time-resolved kinetic/polarization information over SOC,loaded curve with static/dynamic effects confounded,NO,"Cannot separate positive kinetics from OCP, negative kinetics, diffusion, and setup effects."
+thermal Cth,"measured time, heat input, and calibrated temperature response",surface temperatures but no measured timestamps; heat generation not identified,NO,Thermal storage cannot be inferred in capacity coordinates alone.
+thermal Gth,measured-time cooling/heating response and ambient boundary condition,ambient channel exists but no measured timestamps,NO,Heat-transfer rate requires a real timebase.

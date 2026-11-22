@@ -1,0 +1,10 @@
+Ensayo,Rol de la evidencia,Métrica principal,Resultado,Interpretación / limitación
+C/20 OCP,Ajuste OCP,RMSE 5–95%,1.086 mV,Aceptado; ventanas débilmente identificables
+HPPC,Calibración / validación reservada,RMSE balanceado por fase,36.835 / 85.729 mV,Transferencia limitada a bajo SOC
+Descarga 1C,Validación independiente,RMSE de voltaje,114.362 mV,Limitada a bajo SOC y corte
+UDDS,Validación independiente,RMSE de voltaje,30.988 mV,Limitada a bajo SOC y cambios grandes
+Carga CC-CV,Validación direccional,RMSE / sesgo,61.034 / −47.526 mV,Transferencia direccional limitada
+Térmica 1C,Calibración primaria,RMSE de temperatura,0.143622 K,Ajuste primario de un nodo
+Térmica UDDS,Validación A,RMSE / sesgo,0.526698 / −0.512715 K,Subpredicción sistemática
+Térmica CC-CV,Validación A / B,RMSE de temperatura,0.427781 / 0.864391 K,Falla acoplada dominada por error eléctrico
+Panasonic → TRC,Diagnóstico de transferencia,RMSE base / completo,188.882 / 82.134 mV,Transferencia directa incompatible

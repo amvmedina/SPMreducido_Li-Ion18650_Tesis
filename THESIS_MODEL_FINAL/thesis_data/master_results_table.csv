@@ -1,0 +1,10 @@
+dataset,evidence_role,headline_metric,decision_or_limitation
+C/20 OCP,fit,1.086 mV,accepted; windows weakly identifiable
+HPPC,cal / withheld,36.835 / 85.729 mV,low-SOC transfer limited
+1C discharge,validation,114.362 mV,low SOC / cutoff limited
+UDDS,validation,30.988 mV,low SOC & large steps limited
+CC–CV charge,validation,61.034 mV,directional transfer limited
+1C thermal,calibration,0.143622 K,primary one-node fit
+UDDS thermal,validation A,0.526698 K,systematic underprediction
+CC–CV thermal,validation A / B,0.427781 / 0.864391 K,coupled electrical-heat failure
+Uniandes transfer,diagnostic,188.882 / 82.134 mV,direct transfer incompatible

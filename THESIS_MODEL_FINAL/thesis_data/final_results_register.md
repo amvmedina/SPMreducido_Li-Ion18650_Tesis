@@ -1,0 +1,26 @@
+# Final results register
+
+Accepted values only. Every row states whether it is a calibration result, independent validation, diagnostic, or limitation.
+
+| ID | Domain | Experiment | Role | Metric | Value | Status | Limitation | Source |
+|---|---|---|---|---|---:|---|---|---|
+| E1 | electrical | Panasonic C/20 discharge | OCP identification | 5–95% voltage RMSE | 1.085749161 mV | ACCEPTED REPRESENTATION | Stoichiometric windows weakly identifiable; endpoints are nominal effective windows | `thesis_data/panasonic_ocp_identification_closure.md` |
+| E2 | electrical | Panasonic HPPC SOC >= 1/3 | conditional dynamic calibration | phase-balanced RMSE | 36.835197639 mV | CALIBRATION RESULT | Conditional three-parameter fit; parameters not globally identified | `thesis_data/panasonic_hppc_primary_fit_no_low_soc_report.md` |
+| E3 | electrical | Panasonic HPPC SOC < 1/3 | withheld forward validation | phase-balanced RMSE | 85.729432921 mV | LOW-SOC TRANSFER LIMITED | Dominant loaded-transient mismatch; no refit | `thesis_data/panasonic_hppc_low_soc_validation_report.md` |
+| E4 | electrical | Panasonic 1C discharge | independent forward validation | overall voltage RMSE | 114.362188001 mV | 1C TRANSFER LIMITED | Low-SOC RMSE 195.954 mV and cutoff deterioration | `thesis_data/panasonic_1c_forward_validation_report.md` |
+| E5 | electrical | Panasonic UDDS | independent forward validation | overall voltage RMSE | 30.988191694 mV | UDDS TRANSFER LIMITED | High/middle/low SOC RMSE 14.361/21.523/52.785 mV; large-step mismatch | `thesis_data/panasonic_udds_forward_validation_report.md` |
+| E6 | electrical | Panasonic 25 C CC–CV charge | independent directional validation | overall voltage RMSE | 61.033526348 mV | CC-CV CHARGE TRANSFER LIMITED | Bias −47.526 mV; discharge-derived representation; regulated CV is measured reference | `thesis_data/panasonic_cccv_charge_validation_report.md` |
+| T1 | thermal | Panasonic 1C discharge | primary one-node calibration | temperature RMSE | 0.143622065 K | PRIMARY THERMAL CALIBRATION | Measured-voltage heat; SOC 0.10–0.90; effective parameters | `thesis_data/panasonic_1c_thermal_calibration.md` |
+| T2 | thermal | Panasonic UDDS | independent one-node transfer A | temperature RMSE | 0.526697652 K | THERMAL TRANSFER LIMITED | Bias −0.512715 K; measured-voltage heat path | `thesis_data/panasonic_udds_thermal_validation.md` |
+| T3 | thermal | Panasonic CC–CV charge | independent one-node transfer A | temperature RMSE | 0.427780949 K | CHARGE-SIDE THERMAL TRANSFER LIMITED | Near-zero overall bias masks CC/CV bias reversal | `thesis_data/panasonic_cccv_thermal_validation.md` |
+| T4 | electrothermal | Panasonic CC–CV charge | fully predictive transfer B | temperature RMSE | 0.864391266 K | COUPLED TRANSFER FAILED | Electrical heat deficit 436.438 J dominates added degradation | `thesis_data/panasonic_cccv_thermal_validation.md` |
+| T5 | thermal | Panasonic 1C / UDDS | architecture selection | two-node 1C / UDDS RMSE | 0.138221 / 0.532526 K | TWO-NODE NOT RECOVERABLE | Surface capacitance at lower guard; fast mode ~1e-4 s; condition ~2.56e7 | `thesis_data/panasonic_two_node_physical_calibration.md` |
+| U1 | data quality | Uniandes TRC18650 | series-path audit | median R_app clean / affected | 0.03588 / 0.178–0.232 ohm | ELEVATED SERIES-PATH RESPONSE | R_app is a setup diagnostic, not intrinsic R0; affected data rejected for electrical identification | `thesis_data/uniandes_trc18650_case_study_final.md` |
+| U2 | transfer | Panasonic model to clean Uniandes TRC cycle | hierarchical transfer diagnostic | backbone / full-transfer RMSE | 188.882 / 82.134 mV | INCOMPATIBLE DIRECT TRANSFER | Provisional time; static, mapping, and dynamic mismatch; positive-surface support loss | `thesis_data/own_model_transfer_audit.md` |
+
+## Frozen parameter context
+
+- Panasonic electrical: `R0=0.0259594900586 ohm`, `alpha_p=3204.22765511 s`, `d_n=0.000183029692927 1/s`; fixed `alpha_n=3000 s`, `d_p=0.0007 1/s`.
+- Panasonic capacities: `Q_cell=2.994979138519 Ah`, `Q_n=23008.732269258333 C`, `Q_p=14780.898652565113 C`.
+- Panasonic thermal: `Cth=117.52317800099644 J/K`, `Gth=0.10911208974639978 W/K`.
+- Uniandes TRC own-cell capacity reference: `2.8999 Ah`; it is never mixed with the Panasonic capacity.

@@ -1,0 +1,2 @@
+retained_pulses,retained_histories,minimum_pulse_start_soc,R0_ohm,alpha_p_s,d_n_per_s,alpha_n_fixed_s,d_p_fixed_per_s,alpha_p_frozen_domain_upper_s,alpha_p_at_frozen_ocp_domain_boundary,phase_balanced_rmse_v,postfit_condition_number
+40,8,0.3333333333333333,0.0259594900585696,3204.227655111712,0.000183029692926636,3000.0,0.0007,23435.62786984074,False,0.036835197638870915,56.51641490135371

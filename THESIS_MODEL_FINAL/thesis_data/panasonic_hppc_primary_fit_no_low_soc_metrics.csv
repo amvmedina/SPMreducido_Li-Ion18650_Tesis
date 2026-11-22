@@ -1,0 +1,12 @@
+group,subset,metric,value
+overall,all,phase_balanced_objective_v2,0.004070495355284045
+overall,all,phase_balanced_rmse_v,0.036835197638870915
+overall,all,dynamic_raw_rmse_v,0.015158255106254058
+overall,all,rmse_immediate_v,0.043114900568558746
+overall,all,rmse_within_pulse_v,0.04426189689154858
+overall,all,rmse_post_relaxation_v,0.015889782497229506
+overall,all,absolute_rmse_v,0.019408337705016213
+overall,all,absolute_mae_v,0.014342537603350336
+overall,all,absolute_r2,0.9916244954898783
+soc,high,phase_balanced_dynamic_rmse_v,0.037760683203777894
+soc,middle,phase_balanced_dynamic_rmse_v,0.03523874903510381

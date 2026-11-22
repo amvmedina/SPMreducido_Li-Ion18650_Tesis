@@ -1,0 +1,2 @@
+R0_ohm,alpha_p_s,d_n_per_s,alpha_n_fixed_s,d_p_fixed_per_s,Q_n_fixed_c,Q_p_fixed_c,Q_cell_fixed_ah,x_n_start_fixed,x_n_end_fixed,x_p_start_fixed,x_p_end_fixed,conditional_on_provisional_alpha_n_and_d_p,postfit_condition_number,maximum_fitted_x_p_surface,frozen_positive_ocp_upper,alpha_p_at_frozen_ocp_domain_boundary
+0.018333780218606478,11088.815473852605,7.586622869675391e-05,3000.0,0.0007,23008.732269258333,14780.898652565113,2.994979138519,0.720451136448,0.251849704066,0.224027933455,0.953477823621,True,15.060306895339384,0.9599999999873698,0.96,True

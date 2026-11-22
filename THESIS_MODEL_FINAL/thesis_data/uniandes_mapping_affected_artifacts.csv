@@ -1,0 +1,6 @@
+artifact,status,reason
+thesis_data/own_data_quality_audit.csv,unchanged,dataset-level raw diagnostics remain tied to source files
+thesis_data/own_data_apparent_resistance_transitions.csv,unchanged,R_app remains calculated from original adjacent source records
+thesis_data/own_case_study_cross_experiment_metrics.csv,not relabelled by city/temperature,existing values remain dataset-ID diagnostics; temperature interpretation is not transferred
+thesis_data/uniandes_experimental_context_summary.csv,regenerated,now records the corrected discharge-only electrical mapping and separate thermal provenance
+thesis_data/caption_figura_uniandes_voltaje.md,superseded,combined discharge figure replaced by two figures

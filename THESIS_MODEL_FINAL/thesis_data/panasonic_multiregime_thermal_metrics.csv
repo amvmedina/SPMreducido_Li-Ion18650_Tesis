@@ -1,0 +1,122 @@
+scope,subset,metric,value,unit,n_samples
+temperature,1C,mse_k2,0.05491200818634048,K2,299
+temperature,1C,rmse_k,0.2343331137213443,K,299
+temperature,1C,mae_k,0.18424164586327077,K,299
+temperature,1C,mean_signed_error_k,-0.0028836632513801847,K,299
+temperature,1C,max_abs_error_k,0.6124242674348466,K,299
+temperature,1C,r2,0.906033066874812,1,299
+temperature,1C,measured_final_temperature_c,30.986661354782996,degC,299
+temperature,1C,predicted_final_temperature_c,30.73889637153013,degC,299
+temperature,1C,measured_temperature_rise_k,4.123061354782976,K,299
+temperature,1C,predicted_temperature_rise_k,3.875296371530112,K,299
+temperature,HPPC,mse_k2,0.4087450530841569,K2,81637
+temperature,HPPC,rmse_k,0.6393317238211763,K,81637
+temperature,HPPC,mae_k,0.5827395437171579,K,81637
+temperature,HPPC,mean_signed_error_k,-0.5804991941539871,K,81637
+temperature,HPPC,max_abs_error_k,1.210466683752145,K,81637
+temperature,HPPC,r2,-3.932995975998561,1,81637
+temperature,HPPC,measured_final_temperature_c,25.84366,degC,81637
+temperature,HPPC,predicted_final_temperature_c,25.312868010061663,degC,81637
+temperature,HPPC,measured_temperature_rise_k,0.21296000000000959,K,81637
+temperature,HPPC,predicted_temperature_rise_k,-0.31783198993832684,K,81637
+temperature,CC-CV,mse_k2,0.06233864911556016,K2,53
+temperature,CC-CV,rmse_k,0.2496770896889824,K,53
+temperature,CC-CV,mae_k,0.20723734480410508,K,53
+temperature,CC-CV,mean_signed_error_k,-0.009403054051451261,K,53
+temperature,CC-CV,max_abs_error_k,0.5340200402944788,K,53
+temperature,CC-CV,r2,0.8955631513169505,1,53
+temperature,CC-CV,measured_final_temperature_c,29.08074246077723,degC,53
+temperature,CC-CV,predicted_final_temperature_c,29.53484809659824,degC,53
+temperature,CC-CV,measured_temperature_rise_k,2.1804472762468663,K,53
+temperature,CC-CV,predicted_temperature_rise_k,2.634552912067875,K,53
+temperature,CC,mse_k2,0.051259789897194555,K2,47
+temperature,CC,rmse_k,0.22640624968669604,K,47
+temperature,CC,mae_k,0.1857658765120916,K,47
+temperature,CC,mean_signed_error_k,-0.058530743473961304,K,47
+temperature,CC,max_abs_error_k,0.5340200402944788,K,47
+temperature,CC,r2,0.9203475040779463,1,47
+temperature,CC,measured_final_temperature_c,30.013109999999983,degC,47
+temperature,CC,predicted_final_temperature_c,30.178897838056287,degC,47
+temperature,CC,measured_temperature_rise_k,3.112814815469619,K,47
+temperature,CC,predicted_temperature_rise_k,3.2786026535259225,K,47
+temperature,CV,mse_k2,0.1491230463260908,K2,6
+temperature,CV,rmse_k,0.38616453271383017,K,6
+temperature,CV,mae_k,0.37543051309154407,K,6
+temperature,CV,mean_signed_error_k,0.37543051309154407,K,6
+temperature,CV,max_abs_error_k,0.4541056358210085,K,6
+temperature,CV,r2,-0.36981740357824155,1,6
+temperature,CV,measured_final_temperature_c,29.08074246077723,degC,6
+temperature,CV,predicted_final_temperature_c,29.53484809659824,degC,6
+temperature,CV,measured_temperature_rise_k,-0.9323675392227528,K,6
+temperature,CV,predicted_temperature_rise_k,-0.6642970713042473,K,6
+temperature,UDDS Validation A,mse_k2,0.32741029145796235,K2,194744
+temperature,UDDS Validation A,rmse_k,0.5721977730277901,K,194744
+temperature,UDDS Validation A,mae_k,0.5636034862846729,K,194744
+temperature,UDDS Validation A,mean_signed_error_k,-0.5634459050990408,K,194744
+temperature,UDDS Validation A,max_abs_error_k,0.8480143893266927,K,194744
+temperature,UDDS Validation A,r2,-5.0421222138149435,1,194744
+temperature,UDDS Validation A,measured_final_temperature_c,26.469807973368006,degC,194744
+temperature,UDDS Validation A,predicted_final_temperature_c,26.018712688974915,degC,194744
+temperature,UDDS Validation A,measured_temperature_rise_k,0.6369682113646604,K,194744
+temperature,UDDS Validation A,predicted_temperature_rise_k,0.18587292697156954,K,194744
+temperature,UDDS fully predictive,mse_k2,0.5112605793655961,K2,194744
+temperature,UDDS fully predictive,rmse_k,0.7150248802423564,K,194744
+temperature,UDDS fully predictive,mae_k,0.6968651732046396,K,194744
+temperature,UDDS fully predictive,mean_signed_error_k,-0.6967133410641073,K,194744
+temperature,UDDS fully predictive,max_abs_error_k,1.3817216302784914,K,194744
+temperature,UDDS fully predictive,r2,-8.434947477909041,1,194744
+temperature,UDDS fully predictive,measured_final_temperature_c,26.469807973368006,degC,194744
+temperature,UDDS fully predictive,predicted_final_temperature_c,25.40792761058958,degC,194744
+temperature,UDDS fully predictive,measured_temperature_rise_k,0.6369682113646604,K,194744
+temperature,UDDS fully predictive,predicted_temperature_rise_k,-0.42491215141376415,K,194744
+calibration,summary,c_th_j_per_k,76.50128099706168,J/K,81989
+calibration,summary,g_th_w_per_k,0.1230846306832681,W/K,81989
+calibration,summary,tau_s,621.5339849694259,s,81989
+calibration,summary,objective_k2,0.17533190346201918,K2,81989
+calibration,summary,conditioning_rank,2,1,81989
+calibration,summary,conditioning_singular_value_1,2.6203342464542465,1,81989
+calibration,summary,conditioning_singular_value_2,0.3867658399552969,1,81989
+calibration,summary,conditioning_condition_number,6.774988832408543,1,81989
+calibration,summary,sensitivity_correlation,0.6962697412200325,1,81989
+calibration,summary,covariance_parameter_correlation,-0.6970763359864078,1,81989
+calibration,summary,c_log_fraction_to_nearest_bound,0.48514417227235934,1,81989
+calibration,summary,g_log_fraction_to_nearest_bound,0.2274490432784719,1,81989
+calibration,summary,c_within_one_percent_log_range,False,1,81989
+calibration,summary,g_within_one_percent_log_range,False,1,81989
+calibration,summary,multistart_attempted,64,1,81989
+calibration,summary,multistart_successful,64,1,81989
+calibration,summary,multistart_near_optimal,64,1,81989
+calibration,summary,multistart_all_c_min,76.4890785039349,1,81989
+calibration,summary,multistart_all_c_max,76.5142070558622,1,81989
+calibration,summary,multistart_all_g_min,0.12308128094400968,1,81989
+calibration,summary,multistart_all_g_max,0.12308779924954745,1,81989
+calibration,summary,multistart_near_c_min,76.4890785039349,1,81989
+calibration,summary,multistart_near_c_max,76.5142070558622,1,81989
+calibration,summary,multistart_near_g_min,0.12308128094400968,1,81989
+calibration,summary,multistart_near_g_max,0.12308779924954745,1,81989
+calibration,summary,udds_rmse_relative_improvement,-0.08638755221716043,1,81989
+calibration,summary,udds_abs_bias_relative_improvement,-0.09894666867141733,1,81989
+comparison,Accepted 1C-only pair,c_th_j_per_k,117.52317800099644,J/K,0
+comparison,Accepted 1C-only pair,g_th_w_per_k,0.10911208974639978,W/K,0
+comparison,Accepted 1C-only pair,tau_s,1077.0866754925678,s,0
+comparison,Accepted 1C-only pair,one_c_rmse_k,0.14362206521298904,K,0
+comparison,Accepted 1C-only pair,hppc_rmse_k,0.6172731792332983,K,0
+comparison,Accepted 1C-only pair,cccv_a_rmse_k,0.4277809492104845,K,0
+comparison,Accepted 1C-only pair,udds_a_rmse_k,0.5266976521036362,K,0
+comparison,Accepted 1C-only pair,udds_a_bias_k,-0.5127145121434052,K,0
+comparison,Previous 1C+HPPC joint optimum,c_th_j_per_k,200.0,J/K,0
+comparison,Previous 1C+HPPC joint optimum,g_th_w_per_k,0.07845155487126856,W/K,0
+comparison,Previous 1C+HPPC joint optimum,tau_s,2549.343991055126,s,0
+comparison,Previous 1C+HPPC joint optimum,one_c_rmse_k,0.25414070888399676,K,0
+comparison,Previous 1C+HPPC joint optimum,hppc_rmse_k,0.512740397250704,K,0
+comparison,Previous 1C+HPPC joint optimum,cccv_a_rmse_k,0.6509747668521232,K,0
+comparison,Previous 1C+HPPC joint optimum,udds_a_rmse_k,0.378519120183352,K,0
+comparison,Previous 1C+HPPC joint optimum,udds_a_bias_k,-0.3532516790281259,K,0
+comparison,New 1C+HPPC+CC-CV common pair,c_th_j_per_k,76.50128099706168,J/K,0
+comparison,New 1C+HPPC+CC-CV common pair,g_th_w_per_k,0.1230846306832681,W/K,0
+comparison,New 1C+HPPC+CC-CV common pair,tau_s,621.5339849694259,s,0
+comparison,New 1C+HPPC+CC-CV common pair,one_c_rmse_k,0.2343331137213443,K,0
+comparison,New 1C+HPPC+CC-CV common pair,hppc_rmse_k,0.6393317238211763,K,0
+comparison,New 1C+HPPC+CC-CV common pair,cccv_a_rmse_k,0.2496770896889824,K,0
+comparison,New 1C+HPPC+CC-CV common pair,udds_a_rmse_k,0.5721977730277901,K,0
+comparison,New 1C+HPPC+CC-CV common pair,udds_a_bias_k,-0.5634459050990408,K,0

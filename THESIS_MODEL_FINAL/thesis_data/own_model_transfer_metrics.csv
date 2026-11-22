@@ -1,0 +1,112 @@
+test,subset,metric,value,unit,note
+A_voltage_backbone,overall,rmse_v,0.18888214089090216,V,Panasonic Ueq minus loaded TRC 1C voltage; not OCP validation
+A_voltage_backbone,overall,mae_v,0.1792770126040727,V,Panasonic Ueq minus loaded TRC 1C voltage; not OCP validation
+A_voltage_backbone,overall,bias_v,0.1792770126040727,V,Panasonic Ueq minus loaded TRC 1C voltage; not OCP validation
+A_voltage_backbone,overall,max_abs_error_v,0.3566850874043075,V,Panasonic Ueq minus loaded TRC 1C voltage; not OCP validation
+A_voltage_backbone,overall,r2,0.6101075743461974,1,Panasonic Ueq minus loaded TRC 1C voltage; not OCP validation
+A_voltage_backbone,overall,n_samples,1001,count,Panasonic Ueq minus loaded TRC 1C voltage; not OCP validation
+A_voltage_backbone,soc_high,rmse_v,0.14647885996053364,V,Capacity-coordinate regional diagnostic
+A_voltage_backbone,soc_high,mae_v,0.1444930378427666,V,Capacity-coordinate regional diagnostic
+A_voltage_backbone,soc_high,bias_v,0.1444930378427666,V,Capacity-coordinate regional diagnostic
+A_voltage_backbone,soc_high,max_abs_error_v,0.18726428631089753,V,Capacity-coordinate regional diagnostic
+A_voltage_backbone,soc_high,r2,-2.6345822868237962,1,Capacity-coordinate regional diagnostic
+A_voltage_backbone,soc_high,n_samples,334,count,Capacity-coordinate regional diagnostic
+A_voltage_backbone,soc_middle,rmse_v,0.1439220279714465,V,Capacity-coordinate regional diagnostic
+A_voltage_backbone,soc_middle,mae_v,0.1414904671014095,V,Capacity-coordinate regional diagnostic
+A_voltage_backbone,soc_middle,bias_v,0.1414904671014095,V,Capacity-coordinate regional diagnostic
+A_voltage_backbone,soc_middle,max_abs_error_v,0.19185748920256662,V,Capacity-coordinate regional diagnostic
+A_voltage_backbone,soc_middle,r2,-1.0289107082637101,1,Capacity-coordinate regional diagnostic
+A_voltage_backbone,soc_middle,n_samples,333,count,Capacity-coordinate regional diagnostic
+A_voltage_backbone,soc_low,rmse_v,0.2545878703926909,V,Capacity-coordinate regional diagnostic
+A_voltage_backbone,soc_low,mae_v,0.2517343994982736,V,Capacity-coordinate regional diagnostic
+A_voltage_backbone,soc_low,bias_v,0.2517343994982736,V,Capacity-coordinate regional diagnostic
+A_voltage_backbone,soc_low,max_abs_error_v,0.3566850874043075,V,Capacity-coordinate regional diagnostic
+A_voltage_backbone,soc_low,r2,-1.9246081067502345,1,Capacity-coordinate regional diagnostic
+A_voltage_backbone,soc_low,n_samples,334,count,Capacity-coordinate regional diagnostic
+B_literal_full_transfer,valid_ocp_support_only,rmse_v,0.08213428866662793,V,"PROVISIONAL-TIME direct transfer; invalid OCP-support samples excluded, not clipped"
+B_literal_full_transfer,valid_ocp_support_only,mae_v,0.059902864842318645,V,"PROVISIONAL-TIME direct transfer; invalid OCP-support samples excluded, not clipped"
+B_literal_full_transfer,valid_ocp_support_only,bias_v,0.05698237114731629,V,"PROVISIONAL-TIME direct transfer; invalid OCP-support samples excluded, not clipped"
+B_literal_full_transfer,valid_ocp_support_only,max_abs_error_v,0.207019968496573,V,"PROVISIONAL-TIME direct transfer; invalid OCP-support samples excluded, not clipped"
+B_literal_full_transfer,valid_ocp_support_only,r2,0.9209968908181174,1,"PROVISIONAL-TIME direct transfer; invalid OCP-support samples excluded, not clipped"
+B_literal_full_transfer,valid_ocp_support_only,n_samples,1182,count,"PROVISIONAL-TIME direct transfer; invalid OCP-support samples excluded, not clipped"
+B_literal_full_transfer,soc_high_valid_support_only,rmse_v,0.030305851777712608,V,PROVISIONAL-TIME regional diagnostic
+B_literal_full_transfer,soc_high_valid_support_only,mae_v,0.02037671102955366,V,PROVISIONAL-TIME regional diagnostic
+B_literal_full_transfer,soc_high_valid_support_only,bias_v,0.017680240419240774,V,PROVISIONAL-TIME regional diagnostic
+B_literal_full_transfer,soc_high_valid_support_only,max_abs_error_v,0.06595767694127463,V,PROVISIONAL-TIME regional diagnostic
+B_literal_full_transfer,soc_high_valid_support_only,r2,0.8436285327764143,1,PROVISIONAL-TIME regional diagnostic
+B_literal_full_transfer,soc_high_valid_support_only,n_samples,401,count,PROVISIONAL-TIME regional diagnostic
+B_literal_full_transfer,soc_middle_valid_support_only,rmse_v,0.04421526375745046,V,PROVISIONAL-TIME regional diagnostic
+B_literal_full_transfer,soc_middle_valid_support_only,mae_v,0.0320522690465484,V,PROVISIONAL-TIME regional diagnostic
+B_literal_full_transfer,soc_middle_valid_support_only,bias_v,0.0261402021319416,V,PROVISIONAL-TIME regional diagnostic
+B_literal_full_transfer,soc_middle_valid_support_only,max_abs_error_v,0.0882250428622271,V,PROVISIONAL-TIME regional diagnostic
+B_literal_full_transfer,soc_middle_valid_support_only,r2,0.8089507366298341,1,PROVISIONAL-TIME regional diagnostic
+B_literal_full_transfer,soc_middle_valid_support_only,n_samples,401,count,PROVISIONAL-TIME regional diagnostic
+B_literal_full_transfer,soc_low_valid_support_only,rmse_v,0.13398324512626952,V,PROVISIONAL-TIME regional diagnostic
+B_literal_full_transfer,soc_low_valid_support_only,mae_v,0.13100306640290452,V,PROVISIONAL-TIME regional diagnostic
+B_literal_full_transfer,soc_low_valid_support_only,bias_v,0.13100306640290452,V,PROVISIONAL-TIME regional diagnostic
+B_literal_full_transfer,soc_low_valid_support_only,max_abs_error_v,0.207019968496573,V,PROVISIONAL-TIME regional diagnostic
+B_literal_full_transfer,soc_low_valid_support_only,r2,0.022480092559511444,1,PROVISIONAL-TIME regional diagnostic
+B_literal_full_transfer,soc_low_valid_support_only,n_samples,380,count,PROVISIONAL-TIME regional diagnostic
+error_decomposition,measured_loaded_offset,mean_v,-0.1763788782407266,V,Not an intrinsic TRC overpotential
+error_decomposition,measured_loaded_offset,mean_abs_v,0.1763788782407266,V,Not an intrinsic TRC overpotential
+error_decomposition,measured_loaded_offset,rms_v,0.1850286876663789,V,Not an intrinsic TRC overpotential
+error_decomposition,measured_loaded_offset,min_v,-0.3215079223835904,V,Not an intrinsic TRC overpotential
+error_decomposition,measured_loaded_offset,max_v,-0.05876401653785113,V,Not an intrinsic TRC overpotential
+error_decomposition,full_minus_nominal_backbone,mean_v,-0.11939650709341032,V,Not an intrinsic TRC overpotential
+error_decomposition,full_minus_nominal_backbone,mean_abs_v,0.11939650709341032,V,Not an intrinsic TRC overpotential
+error_decomposition,full_minus_nominal_backbone,rms_v,0.1198819301601041,V,Not an intrinsic TRC overpotential
+error_decomposition,full_minus_nominal_backbone,min_v,-0.14118967114494652,V,Not an intrinsic TRC overpotential
+error_decomposition,full_minus_nominal_backbone,max_v,-0.09141147827969309,V,Not an intrinsic TRC overpotential
+error_decomposition,full_minus_average_equilibrium,mean_v,-0.13436009690604322,V,Not an intrinsic TRC overpotential
+error_decomposition,full_minus_average_equilibrium,mean_abs_v,0.13436009690604322,V,Not an intrinsic TRC overpotential
+error_decomposition,full_minus_average_equilibrium,rms_v,0.13519536929550105,V,Not an intrinsic TRC overpotential
+error_decomposition,full_minus_average_equilibrium,min_v,-0.1603374869031633,V,Not an intrinsic TRC overpotential
+error_decomposition,full_minus_average_equilibrium,max_v,-0.09141147827969309,V,Not an intrinsic TRC overpotential
+directional_recharge,all_recharge,rmse_v,0.04009185276298522,V,Continuous frozen transfer through discharge/rest/recharge; provisional time
+directional_recharge,all_recharge,mae_v,0.03674362617744014,V,Continuous frozen transfer through discharge/rest/recharge; provisional time
+directional_recharge,all_recharge,bias_v,-0.03493348377141718,V,Continuous frozen transfer through discharge/rest/recharge; provisional time
+directional_recharge,all_recharge,max_abs_error_v,0.147100165389082,V,Continuous frozen transfer through discharge/rest/recharge; provisional time
+directional_recharge,all_recharge,r2,0.9765331598159244,1,Continuous frozen transfer through discharge/rest/recharge; provisional time
+directional_recharge,all_recharge,n_samples,1477,count,Continuous frozen transfer through discharge/rest/recharge; provisional time
+directional_recharge,cc,rmse_v,0.03988262855777549,V,Continuous frozen transfer through discharge/rest/recharge; provisional time
+directional_recharge,cc,mae_v,0.03549183944975955,V,Continuous frozen transfer through discharge/rest/recharge; provisional time
+directional_recharge,cc,bias_v,-0.032923558629686635,V,Continuous frozen transfer through discharge/rest/recharge; provisional time
+directional_recharge,cc,max_abs_error_v,0.147100165389082,V,Continuous frozen transfer through discharge/rest/recharge; provisional time
+directional_recharge,cc,r2,0.9693297885755083,1,Continuous frozen transfer through discharge/rest/recharge; provisional time
+directional_recharge,cc,n_samples,1041,count,Continuous frozen transfer through discharge/rest/recharge; provisional time
+directional_recharge,cv,rmse_v,0.040587037990939066,V,Continuous frozen transfer through discharge/rest/recharge; provisional time
+directional_recharge,cv,mae_v,0.039732410543301344,V,Continuous frozen transfer through discharge/rest/recharge; provisional time
+directional_recharge,cv,bias_v,-0.039732410543301344,V,Continuous frozen transfer through discharge/rest/recharge; provisional time
+directional_recharge,cv,max_abs_error_v,0.05241023767606379,V,Continuous frozen transfer through discharge/rest/recharge; provisional time
+directional_recharge,cv,r2,-4259.955299575335,1,Continuous frozen transfer through discharge/rest/recharge; provisional time
+directional_recharge,cv,n_samples,436,count,Continuous frozen transfer through discharge/rest/recharge; provisional time
+C_state_mapping,z_0.00,x_n_avg,0.720451136448,1,surface_support_valid=True; source_z=0.000000000
+C_state_mapping,z_0.00,x_p_avg,0.224027933455,1,surface_support_valid=True; source_z=0.000000000
+C_state_mapping,z_0.00,x_n_surface,0.7168503917194751,1,surface_support_valid=True; source_z=0.000000000
+C_state_mapping,z_0.00,x_p_surface,0.23001461689912459,1,surface_support_valid=True; source_z=0.000000000
+C_state_mapping,z_0.25,x_n_avg,0.6070198543826657,1,surface_support_valid=True; source_z=0.250284493
+C_state_mapping,z_0.25,x_p_avg,0.40060109462386234,1,surface_support_valid=True; source_z=0.250284493
+C_state_mapping,z_0.25,x_n_surface,0.581641675501604,1,surface_support_valid=True; source_z=0.250284493
+C_state_mapping,z_0.25,x_p_surface,0.44277358621582874,1,surface_support_valid=True; source_z=0.250284493
+C_state_mapping,z_0.50,x_n_avg,0.4935885723173315,1,surface_support_valid=True; source_z=0.499810338
+C_state_mapping,z_0.50,x_p_avg,0.5771742557927246,1,surface_support_valid=True; source_z=0.499810338
+C_state_mapping,z_0.50,x_n_surface,0.46840844815901217,1,surface_support_valid=True; source_z=0.499810338
+C_state_mapping,z_0.50,x_p_surface,0.6190422541530108,1,surface_support_valid=True; source_z=0.499810338
+C_state_mapping,z_0.75,x_n_avg,0.38015729025199724,1,surface_support_valid=True; source_z=0.750129315
+C_state_mapping,z_0.75,x_p_avg,0.753747416961587,1,surface_support_valid=True; source_z=0.750129315
+C_state_mapping,z_0.75,x_n_surface,0.3548031698911759,1,surface_support_valid=True; source_z=0.750129315
+C_state_mapping,z_0.75,x_p_surface,0.7958860511124235,1,surface_support_valid=True; source_z=0.750129315
+C_state_mapping,z_1.00,x_n_avg,0.26672600818666303,1,surface_support_valid=False; source_z=1.000000000
+C_state_mapping,z_1.00,x_p_avg,0.9303205781304493,1,surface_support_valid=False; source_z=1.000000000
+C_state_mapping,z_1.00,x_n_surface,0.2411978823882484,1,surface_support_valid=False; source_z=1.000000000
+C_state_mapping,z_1.00,x_p_surface,0.9727300326655873,1,surface_support_valid=False; source_z=1.000000000
+audit,transfer_integrity,trc_q_ref_ah,2.8998999999999997,1,No measured time; no clipping or parameter change
+audit,transfer_integrity,panasonic_capacity_fraction_traversed,0.9682538227741992,1,No measured time; no clipping or parameter change
+audit,transfer_integrity,provisional_dt_s,2.9947024646677978,1,No measured time; no clipping or parameter change
+audit,transfer_integrity,discharge_surface_valid_count,1182,1,No measured time; no clipping or parameter change
+audit,transfer_integrity,discharge_surface_invalid_count,22,1,No measured time; no clipping or parameter change
+audit,transfer_integrity,discharge_negative_surface_invalid_count,0,1,No measured time; no clipping or parameter change
+audit,transfer_integrity,discharge_positive_surface_invalid_count,22,1,No measured time; no clipping or parameter change
+audit,transfer_integrity,charge_surface_valid_count,1477,1,No measured time; no clipping or parameter change
+audit,transfer_integrity,charge_surface_invalid_count,0,1,No measured time; no clipping or parameter change
+audit,transfer_integrity,clipping_used,False,boolean,No measured time; no clipping or parameter change

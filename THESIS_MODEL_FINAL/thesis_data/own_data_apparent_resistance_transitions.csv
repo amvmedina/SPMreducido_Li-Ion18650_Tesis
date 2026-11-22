@@ -1,0 +1,21 @@
+dataset_id,transition_id,pre_index,loaded_index,estimated_time_s,direction,pre_current_a,loaded_current_a,delta_current_a,pre_voltage_v,loaded_voltage_v,delta_voltage_v,r_app_ohm,voltage_response_sign_consistent,diagnostic_label
+pulse_cell1_part1,1,900,901,89.90848408631514,discharge,0.0,-2.8994,-2.8994,4.1015,3.4175,-0.6839999999999997,0.23591087811271289,True,apparent rest-to-load series resistance; not intrinsic cell R0
+pulse_cell1_part1,2,10510,10511,1048.865789379865,discharge,0.0,-2.9008,-2.9008,4.0394,3.3649,-0.6744999999999997,0.23252206287920563,True,apparent rest-to-load series resistance; not intrinsic cell R0
+pulse_cell1_part1,3,13612,13613,1358.4064304850256,discharge,0.0,-2.8987,-2.8987,4.0401,3.3927,-0.6473999999999998,0.22334149791285743,True,apparent rest-to-load series resistance; not intrinsic cell R0
+pulse_cell1_part1,4,26729,26730,2667.318290374255,discharge,0.0,-2.9005,-2.9005,3.8536,3.2186,-0.6350000000000002,0.21892777107395284,True,apparent rest-to-load series resistance; not intrinsic cell R0
+pulse_cell1_part1,5,32831,32832,3276.2212536314078,discharge,0.0,-2.9014,-2.9014,3.8558,3.2142,-0.6416,0.2211346246639553,True,apparent rest-to-load series resistance; not intrinsic cell R0
+pulse_cell1_part1,6,45948,45949,4585.133113520637,discharge,0.0,-2.8995,-2.8995,3.6676,3.0258,-0.6418000000000004,0.22134850836351105,True,apparent rest-to-load series resistance; not intrinsic cell R0
+pulse_cell1_part1,7,49050,49051,4894.673754625797,discharge,0.0,-2.901,-2.901,3.6658,3.0311,-0.6347,0.21878662530162016,True,apparent rest-to-load series resistance; not intrinsic cell R0
+pulse_cell1_part2,1,2177,2178,217.29449047486034,discharge,0.0,-2.8989,-2.8989,3.4642,2.8322,-0.6320000000000001,0.21801372934561392,True,apparent rest-to-load series resistance; not intrinsic cell R0
+pulse_cell1_part2,2,5279,5280,526.7745223632978,discharge,0.0,-2.8999,-2.8999,3.4615,2.7738,-0.6877,0.2371461084864995,True,apparent rest-to-load series resistance; not intrinsic cell R0
+pulse_cell1_part2,3,13812,13813,1378.0940298114076,discharge,0.0,-2.8999,-2.8999,3.3458,2.6819,-0.6638999999999999,0.22893892892858372,True,apparent rest-to-load series resistance; not intrinsic cell R0
+cycle_cell1_ambient,1,1157,1158,3467.86545408531,discharge,0.0,-2.8997,-2.8997,4.192,4.0865,-0.10550000000000015,0.036383074111114994,True,apparent rest-to-load series resistance; not intrinsic cell R0
+cycle_cell1_ambient,2,2562,2563,7675.422416943566,charge,0.0,2.8981,2.8981,3.0754,3.1779,0.10250000000000004,0.035367999723957086,True,apparent rest-to-load series resistance; not intrinsic cell R0
+cycle_cell1_30c,1,534,535,1601.576710457274,discharge,0.0,-2.8985,-2.8985,4.1824,3.485,-0.6974000000000005,0.24060721062618612,True,apparent rest-to-load series resistance; not intrinsic cell R0
+cycle_cell1_30c,2,1769,1770,5298.674350484813,charge,0.0,2.9031,2.9031,3.2697,3.9211,0.6514000000000002,0.22438083428059669,True,apparent rest-to-load series resistance; not intrinsic cell R0
+cycle_cell1_35c,1,1046,1047,3134.385684297372,discharge,0.0,-2.8998,-2.8998,4.1853,3.4965,-0.6887999999999996,0.2375336230084832,True,apparent rest-to-load series resistance; not intrinsic cell R0
+cycle_cell1_35c,2,2334,2335,6990.248875677519,charge,0.0,2.8996,2.8996,3.223,3.8266,0.6036000000000001,0.20816664367498972,True,apparent rest-to-load series resistance; not intrinsic cell R0
+cycle_cell2_undeclared,1,2601,2602,7787.411049816171,discharge,0.0,-2.8986,-2.8986,4.1853,3.6483,-0.5369999999999999,0.18526185054854064,True,apparent rest-to-load series resistance; not intrinsic cell R0
+cycle_cell2_undeclared,2,3929,3930,11761.92368400367,charge,0.0,2.8978,2.8978,3.1795,3.6716,0.4921000000000002,0.1698184829870937,True,apparent rest-to-load series resistance; not intrinsic cell R0
+cycle_cell2_30c,1,618,619,1853.108195126767,discharge,0.0,-2.8983,-2.8983,4.1872,3.5306,-0.6565999999999996,0.22654659628057816,True,apparent rest-to-load series resistance; not intrinsic cell R0
+cycle_cell2_30c,2,1898,1899,5685.060521075494,charge,0.0,2.9016,2.9016,3.2395,3.8346,0.5951,0.20509374138406394,True,apparent rest-to-load series resistance; not intrinsic cell R0

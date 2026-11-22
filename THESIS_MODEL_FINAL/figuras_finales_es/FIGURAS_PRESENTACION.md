@@ -1,0 +1,13 @@
+# Figuras principales para la presentación de 20 minutos
+
+| Diapositiva / tema | Figura | Mensaje en una frase | Número para decir oralmente | No explicar salvo que pregunten |
+|---|---|---|---|---|
+| 3. Compatibilidad OCP | `presentacion/01_ajuste_ocp_panasonic.png` | La curva C/20 queda representada con alta precisión, aunque las ventanas de electrodo no son únicas. | RMSE 5–95% = **1.086 mV**. | La historia completa de multistarts y las alternativas OCP rechazadas. |
+| 4. Calibración eléctrica condicional | `presentacion/02_calibracion_hppc_transferencia_bajo_soc.png` | El ajuste HPPC funciona en su región declarada, pero no transfiere igual a bajo SOC. | **36.835 mV** en calibración frente a **85.729 mV** a bajo SOC. | El detalle de cada pulso, el Jacobiano y todas las correlaciones de parámetros. |
+| 5. Validación dinámica independiente | `presentacion/04_validacion_electrica_udds_panasonic.png` | El desempeño global en UDDS es fuerte, con deterioro localizado a bajo SOC y en cambios grandes de corriente. | RMSE global = **30.988 mV**. | Todas las métricas por cuartil de corriente o los diez eventos individuales. |
+| 7. Calibración térmica primaria | `presentacion/07_calibracion_termica_1c.png` | El modelo de un nodo reproduce con precisión el ensayo térmico usado para calibración. | RMSE = **0.143622 K**, R² = **0.964702**. | El detalle de multistarts y la trayectoria secundaria con calor calculado desde voltaje de modelo. |
+| 8. Transferencia electro-térmica | `presentacion/09_transferencia_termica_carga_cccv.png` | El error eléctrico reduce el calor predicho y domina la falla de la predicción acoplada en carga. | A = **0.427781 K**, B = **0.864391 K**; déficit = **436.438 J**. | Todos los balances por fase CC/CV y las fracciones de calor reversible. |
+| 10. Lección experimental Uniandes | `presentacion/11_respuesta_serie_aparente_uniandes.png` | La auditoría separa una referencia limpia de ensayos con respuesta serie aparente elevada antes de intentar identificar parámetros. | **0.03588 Ω** frente a **0.178–0.232 Ω**. | Una atribución física única; Rapp no es resistencia interna ni R0. |
+| 11. Transferencia entre celdas | `presentacion/13_transferencia_panasonic_a_trc.png` | El modelo Panasonic no puede trasladarse literalmente a la TRC18650 sin adaptación de estado y referencia de voltaje. | **188.882 mV** de base y **82.134 mV** de transferencia completa. | La integración con tiempo provisional y la descomposición completa del error, salvo pregunta. |
+
+La figura `14_flujo_evaluacion_dataset_bateria.png` queda como alternativa para la conclusión o como respaldo metodológico si se dispone de una diapositiva adicional.

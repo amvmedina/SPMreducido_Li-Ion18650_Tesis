@@ -1,0 +1,3 @@
+# Pie de figura — resistencia externa del montaje
+
+Voltaje terminal medido durante las descargas asociadas con Rionegro (Aire 22–24 °C), Cali (Aire 29–31 °C) y Valledupar (Aire 33–37 °C), todas realizadas con el montaje reportado con resistencia externa. Las ciudades proporcionan únicamente contexto climático para los intervalos experimentales; los ensayos no se realizaron necesariamente en esas ciudades. Las diferencias entre curvas no se interpretan como un efecto aislado de la temperatura. Los puntos tenues son las mediciones originales y las líneas usan una mediana móvil segmentada de siete muestras solo para visualización. El eje horizontal muestra la capacidad descargada acumulada en Ah dentro de cada registro; no representa SOC ni demuestra una descarga completa.

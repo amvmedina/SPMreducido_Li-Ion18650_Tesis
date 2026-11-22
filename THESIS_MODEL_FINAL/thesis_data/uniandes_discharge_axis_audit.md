@@ -1,0 +1,12 @@
+# Auditoría del eje de capacidad de las descargas Uniandes
+
+El eje utilizado anteriormente no era un SOC físico. Se calculaba como `SOC_ref = 1 - abs(Q-Q_inicio)/abs(Q_fin-Q_inicio)`, por lo que el primer registro se forzaba a 1 y el último a 0. Los CSV no establecen que esos extremos representen una celda completamente cargada y completamente descargada.
+
+Las figuras corregidas usan `Q_desc,i = abs(Q_i-Q_inicio)` y el eje **Capacidad descargada (Ah)**. Cada curva comienza en 0 Ah y termina en la capacidad realmente recorrida dentro de su registro; no se normaliza entre 0 y 1, no utiliza denominador, no se extrapola y no afirma una descarga completa.
+
+| Curva | Capacidad recorrida (Ah) | Último voltaje (V) | Última corriente (A) | Capacidad final (Ah) | Evidencia de terminación | Conclusión |
+|---|---:|---:|---:|---:|---|---|
+| Rionegro · Aire 22–24 °C · montaje de referencia | 2.8999 | 2.8342 | -2.8991 | -2.9000 | cambio de paso desde descarga activa a corriente cero después de aproximadamente 2.900 Ah, con voltaje cargado de 2.8342 V; el patrón de señal es compatible con un umbral de capacidad | no distinguible a partir del CSV: no se registra el límite de la receta, un código de terminación, un evento del operador ni una bandera de error |
+| Rionegro · Aire 22–24 °C · montaje con resistencia externa | 2.7133 | 2.6000 | -2.9008 | -2.7134 | cambio de paso desde descarga activa a corriente cero a aproximadamente 2.600 V; el patrón de señal es compatible con un umbral de voltaje | no distinguible a partir del CSV: no se registra el límite de la receta, un código de terminación, un evento del operador ni una bandera de error |
+| Cali · Aire 29–31 °C · montaje con resistencia externa | 2.5994 | 2.5999 | -2.9001 | -2.5995 | cambio de paso desde descarga activa a corriente cero a aproximadamente 2.600 V; el patrón de señal es compatible con un umbral de voltaje | no distinguible a partir del CSV: no se registra el límite de la receta, un código de terminación, un evento del operador ni una bandera de error |
+| Valledupar · Aire 33–37 °C · montaje con resistencia externa | 2.4894 | 2.5999 | -2.9013 | -2.4895 | cambio de paso desde descarga activa a corriente cero a aproximadamente 2.600 V; el patrón de señal es compatible con un umbral de voltaje | no distinguible a partir del CSV: no se registra el límite de la receta, un código de terminación, un evento del operador ni una bandera de error |

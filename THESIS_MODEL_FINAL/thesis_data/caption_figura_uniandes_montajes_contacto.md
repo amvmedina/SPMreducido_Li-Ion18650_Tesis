@@ -1,0 +1,3 @@
+# Pie de figura — comparación de montajes
+
+Comparación del voltaje de descarga para dos montajes de contacto asociados con Aire 22–24 °C. El montaje de referencia corresponde a la celda 1 y el montaje con resistencia externa a la celda 2; por tanto, no constituye una comparación antes-después sobre la misma celda ni una estimación aislada de resistencia de contacto. Los puntos tenues son los datos originales y las líneas usan una mediana móvil segmentada de siete muestras, seguida de interpolación lineal, únicamente para visualización. El eje horizontal muestra la capacidad descargada acumulada en Ah dentro del intervalo registrado; no identifica SOC ni demuestra una descarga completa.
