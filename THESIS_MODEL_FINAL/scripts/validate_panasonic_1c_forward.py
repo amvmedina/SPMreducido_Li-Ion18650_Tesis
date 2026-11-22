@@ -35,14 +35,10 @@ from scripts.audit_panasonic_hppc_identifiability import (  # noqa: E402
     Q_P_C as IMPLEMENTED_Q_P_C,
     simulate_local_group,
 )
+from runtime_paths import PANASONIC_1C_PATH, require_data_file  # noqa: E402
 
 
-RAW_SOURCE_PATH = Path(
-    r"C:\Users\amvel\Documents\Andes\2026-1\wykht8y7tg-1"
-    r"\Panasonic 18650PF Data\Panasonic 18650PF Data\25degC"
-    r"\C20 OCV and 1C discharge tests_start_of_tests"
-    r"\03-09-17_17.59 3349_Dis1C_1.mat"
-)
+RAW_SOURCE_PATH = PANASONIC_1C_PATH
 MANIFEST_PATH = REPOSITORY_ROOT / "experimental_data_manifest.md"
 OUTPUT_DIRECTORY = REPOSITORY_ROOT / "thesis_data"
 
@@ -73,10 +69,23 @@ def _as_vector(value: object, name: str) -> np.ndarray:
 
 
 def load_raw_discharge(path: Path = RAW_SOURCE_PATH) -> tuple[tuple[str, ...], dict[str, np.ndarray]]:
-    """Load the raw MATLAB structure and return its numeric channels read-only."""
+    """Load the accepted CSV (or an explicitly supplied MAT) read-only."""
 
-    if not path.is_file():
-        raise FileNotFoundError(path)
+    path = require_data_file(path)
+    if path.suffix.lower() == ".csv":
+        table = np.genfromtxt(path, delimiter=",", names=True, dtype=float, encoding="utf-8")
+        columns = tuple(table.dtype.names or ())
+        required = (
+            "Time", "Voltage", "Current", "Ah", "Wh", "Power",
+            "Battery_Temp_degC", "Chamber_Temp_degC",
+        )
+        missing = sorted(set(required) - set(columns))
+        if missing:
+            raise ValueError(f"Processed 1C CSV is missing required fields: {missing}")
+        arrays = {name: _as_vector(table[name], name) for name in required}
+        if len({array.size for array in arrays.values()}) != 1:
+            raise ValueError("Processed 1C CSV channels have inconsistent lengths.")
+        return columns, arrays
     contents = loadmat(path, squeeze_me=True, struct_as_record=False)
     measurement = contents.get("meas")
     if measurement is None or not hasattr(measurement, "_fieldnames"):

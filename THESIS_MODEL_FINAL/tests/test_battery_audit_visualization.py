@@ -18,7 +18,7 @@ def test_panasonic_c20_plot_uses_finite_measured_and_model_curves() -> None:
 
 
 def test_trc_plot_uses_capacity_and_accepted_condition_mapping() -> None:
-    source_directory = Path(r"C:\Users\amvel\Documents\Andes\Tesis\TRC18650experimental data")
+    source_directory = Path(__file__).resolve().parents[1] / "data" / "trc18650"
     if not source_directory.is_dir():
         pytest.skip("Configured TRC files are not installed.")
     plot = load_trc_plot("Rionegro · Aire 22–24 °C", "Descarga", "Referencia", "Voltaje")

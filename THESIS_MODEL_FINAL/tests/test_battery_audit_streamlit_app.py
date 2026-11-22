@@ -23,7 +23,7 @@ def test_audit_card_palette_has_theme_independent_text_contrast(background: str)
 
 def test_streamlit_case_button_renders_calculated_results() -> None:
     pytest.importorskip("streamlit")
-    source_directory = Path(r"C:\Users\amvel\Documents\Andes\Tesis\TRC18650experimental data")
+    source_directory = Path(__file__).resolve().parents[1] / "data" / "trc18650"
     if not source_directory.is_dir():
         pytest.skip("Configured TRC case-study files are not installed.")
 

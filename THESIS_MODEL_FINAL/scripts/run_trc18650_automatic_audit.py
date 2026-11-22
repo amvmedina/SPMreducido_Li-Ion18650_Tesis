@@ -35,6 +35,13 @@ from scripts.validate_panasonic_1c_forward import (  # noqa: E402
     Q_N_C,
     Q_P_C,
 )
+from runtime_paths import (  # noqa: E402
+    PANASONIC_1C_PATH,
+    PANASONIC_C20_PATH,
+    PANASONIC_CCCV_PATH,
+    PANASONIC_HPPC_PATH,
+    PANASONIC_UDDS_PATH,
+)
 
 
 DEFAULT_OUTPUT_DIRECTORY = ROOT / "thesis_data"
@@ -43,45 +50,27 @@ EXPERIMENTS_NAME = "trc18650_automatic_audit_experiments.csv"
 RECOMMENDATIONS_NAME = "trc18650_automatic_audit_recommendations.csv"
 
 
-def panasonic_root() -> Path:
-    return (
-        ROOT
-        / "Panasonic-18650PF-Data-master"
-        / "Panasonic-18650PF-Data-master"
-        / "Panasonic 18650PF Data"
-    )
-
-
 def reference_datasets() -> tuple[ReferenceDataset, ...]:
-    base = panasonic_root() / "25degC"
     return (
         ReferenceDataset(
             "C/20 capacity and OCP reference",
-            base
-            / "C20 OCV and 1C discharge tests_start_of_tests"
-            / "05-08-17_13.26 C20 OCV Test_C20_25dC.mat",
+            PANASONIC_C20_PATH,
         ),
         ReferenceDataset(
             "HPPC dynamic calibration",
-            base
-            / "5 pulse disch"
-            / "03-11-17_08.47 25degC_5Pulse_HPPC_Pan18650PF.mat",
+            PANASONIC_HPPC_PATH,
         ),
         ReferenceDataset(
             "1C electrical validation and thermal calibration",
-            base
-            / "C20 OCV and 1C discharge tests_start_of_tests"
-            / "03-09-17_17.59 3349_Dis1C_1.mat",
+            PANASONIC_1C_PATH,
         ),
         ReferenceDataset(
             "UDDS independent validation",
-            base / "Drive cycles" / "03-21-17_00.29 25degC_UDDS_Pan18650PF.mat",
+            PANASONIC_UDDS_PATH,
         ),
         ReferenceDataset(
             "CC-CV charge validation",
-            base
-            / "C20 OCV and 1C discharge tests_start_of_tests"
-            / "03-09-17_19.03 3349_Charge2.mat",
+            PANASONIC_CCCV_PATH,
         ),
     )
 

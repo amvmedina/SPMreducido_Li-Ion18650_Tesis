@@ -35,24 +35,16 @@ from models.ocp_panasonic_qi_frozen import (  # noqa: E402
     X_P_END,
     X_P_START,
 )
+from runtime_paths import (  # noqa: E402
+    PANASONIC_CCCV_PATH,
+    PANASONIC_PRECEDING_1C_PATH,
+    require_data_file,
+)
 
 
-RAW_SOURCE_PATH = Path(
-    r"C:\Users\amvel\Documents\Andes\2026-1\wykht8y7tg-1"
-    r"\Panasonic 18650PF Data\Panasonic 18650PF Data\25degC"
-    r"\C20 OCV and 1C discharge tests_start_of_tests"
-    r"\03-09-17_19.03 3349_Charge2.mat"
-)
-CONVERTED_SOURCE_PATH = Path(
-    r"C:\Users\amvel\Documents\Andes\Tesis\datasets\converted_csv"
-    r"\charge_3349_2_converted.csv"
-)
-PRECEDING_DISCHARGE_PATH = Path(
-    r"C:\Users\amvel\Documents\Andes\2026-1\wykht8y7tg-1"
-    r"\Panasonic 18650PF Data\Panasonic 18650PF Data\25degC"
-    r"\C20 OCV and 1C discharge tests_start_of_tests"
-    r"\03-09-17_17.59 3349_Dis1C_1.mat"
-)
+RAW_SOURCE_PATH = PANASONIC_CCCV_PATH
+CONVERTED_SOURCE_PATH = PANASONIC_CCCV_PATH
+PRECEDING_DISCHARGE_PATH = PANASONIC_PRECEDING_1C_PATH
 MANIFEST_PATH = REPOSITORY_ROOT / "experimental_data_manifest.md"
 OUTPUT_DIRECTORY = REPOSITORY_ROOT / "thesis_data"
 
@@ -114,8 +106,21 @@ def _vector(value: object, name: str) -> np.ndarray:
 
 
 def load_mat_channels(path: Path) -> tuple[tuple[str, ...], dict[str, np.ndarray]]:
-    if not path.is_file():
-        raise FileNotFoundError(path)
+    path = require_data_file(path)
+    if path.suffix.lower() == ".csv":
+        table = np.genfromtxt(path, delimiter=",", names=True, dtype=float, encoding="utf-8")
+        columns = tuple(table.dtype.names or ())
+        required = (
+            "Time", "Voltage", "Current", "Ah", "Wh", "Power",
+            "Battery_Temp_degC", "Chamber_Temp_degC",
+        )
+        missing = sorted(set(required) - set(columns))
+        if missing:
+            raise ValueError(f"Processed source CSV is missing required fields: {missing}")
+        arrays = {name: _vector(table[name], name) for name in required}
+        if len({array.size for array in arrays.values()}) != 1:
+            raise ValueError("Processed source CSV channels have inconsistent lengths.")
+        return columns, arrays
     measurement = loadmat(path, squeeze_me=True, struct_as_record=False).get("meas")
     if measurement is None or not hasattr(measurement, "_fieldnames"):
         raise ValueError(f"Expected a MATLAB structure named 'meas' in {path}.")

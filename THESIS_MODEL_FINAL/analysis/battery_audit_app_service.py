@@ -24,6 +24,7 @@ from analysis.battery_dataset_assessment import NonidealityFlag, evaluate_data_q
 from analysis.experimental_data_audit import ExperimentMetadata, StandardExperiment, load_chroma_experiment
 from scripts.audit_own_trc18650_data import PART2_COLUMNS, experiment_metadata
 from scripts.run_trc18650_automatic_audit import model_snapshot, reference_datasets
+from runtime_paths import require_data_file
 
 
 STATUS_CONFORME = "CONFORME"
@@ -336,7 +337,7 @@ def build_trc_case_study(root: Path | None = None) -> ApplicationAuditResult:
         ("cycle_cell1_30c", "cali_termico_valledupar_descarga", "Cali / Valledupar · procedencia separada", "montaje con resistencia externa", (ROLE_CHARACTERIZATION, ROLE_THERMAL), False),
         ("cycle_cell1_35c", "valledupar_carga_termica", "Valledupar · Aire 33–37 °C", "montaje con resistencia externa", (ROLE_CHARACTERIZATION, ROLE_THERMAL), False),
     )
-    specs = [UploadedFileSpec(metadata[source].path.name, metadata[source].path.read_bytes(), public, "identificador conservado", condition, setup, roles, metadata[source].temperature_roles, None, include)
+    specs = [UploadedFileSpec(metadata[source].path.name, require_data_file(metadata[source].path).read_bytes(), public, "identificador conservado", condition, setup, roles, metadata[source].temperature_roles, None, include)
              for source, public, condition, setup, roles, include in selections]
     calculated = audit_uploaded_files(specs, CellContext("no documentada", 2.8999, "no documentados"))
     visible = (
@@ -359,7 +360,7 @@ def _panasonic_common_records() -> tuple[CommonAuditRecord, ...]:
     from scripts.validate_panasonic_udds_forward import load_udds, remove_exact_duplicate_times
     from scripts.verify_panasonic_c20_qi_frozen import DATA_PATH, DISCHARGE_END_INDEX_INCLUSIVE, DISCHARGE_START_INDEX
 
-    table = np.genfromtxt(DATA_PATH, delimiter=",", names=True, dtype=float, encoding="utf-8")
+    table = np.genfromtxt(require_data_file(DATA_PATH), delimiter=",", names=True, dtype=float, encoding="utf-8")
     selection = slice(DISCHARGE_START_INDEX, DISCHARGE_END_INDEX_INCLUSIVE + 1)
     c20_time = np.asarray(table["Time"][selection]); c20_current = np.asarray(table["Current"][selection]); c20_voltage = np.asarray(table["Voltage"][selection])
     c20_capacity = np.concatenate(([0.0], np.cumsum(0.5 * (np.abs(c20_current[:-1]) + np.abs(c20_current[1:])) * np.diff(c20_time) / 3600.0)))

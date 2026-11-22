@@ -24,12 +24,10 @@ from models.ocp_panasonic_qi_frozen import (  # noqa: E402
     X_P_END,
     X_P_START,
 )
+from runtime_paths import PANASONIC_C20_PATH, require_data_file  # noqa: E402
 
 
-DATA_PATH = Path(
-    r"C:\Users\amvel\Documents\Andes\Tesis\datasets\converted_csv"
-    r"\c20_ocv_25C_converted.csv"
-)
+DATA_PATH = PANASONIC_C20_PATH
 MULTISTART_PATH = REPOSITORY_ROOT / "thesis_data" / "panasonic_c20_qi_up_multistart.csv"
 REPORT_PATH = REPOSITORY_ROOT / "thesis_data" / "panasonic_ocp_identification_closure.md"
 DISCHARGE_START_INDEX = 6
@@ -66,7 +64,7 @@ def _verify_frozen_values(record: dict[str, str]) -> None:
 
 
 def _load_c20() -> tuple[np.ndarray, np.ndarray]:
-    table = np.genfromtxt(DATA_PATH, delimiter=",", names=True, dtype=float, encoding="utf-8")
+    table = np.genfromtxt(require_data_file(DATA_PATH), delimiter=",", names=True, dtype=float, encoding="utf-8")
     selection = slice(DISCHARGE_START_INDEX, DISCHARGE_END_INDEX_INCLUSIVE + 1)
     time_s = np.asarray(table["Time"][selection], dtype=float)
     current_a = np.asarray(table["Current"][selection], dtype=float)

@@ -29,10 +29,11 @@ from analysis.experimental_data_audit import (  # noqa: E402
     largest_log_gap_reference_group,
     load_chroma_experiment,
 )
+from runtime_paths import TRC18650_DATA_DIRECTORY  # noqa: E402
 
 
-SOURCE_DIRECTORY = Path(r"C:\Users\amvel\Documents\Andes\Tesis\TRC18650experimental data")
-CONTROL_DIRECTORY = Path(r"C:\Users\amvel\Documents\Andes\Tesis\Control Termico\datos")
+SOURCE_DIRECTORY = TRC18650_DATA_DIRECTORY
+CONTROL_DIRECTORY = REPOSITORY_ROOT / "data" / "thermal_control"
 OUTPUT_DIRECTORY = REPOSITORY_ROOT / "thesis_data"
 FIGURE_DIRECTORY = OUTPUT_DIRECTORY / "own_data_audit_figures"
 MANIFEST_PATH = OUTPUT_DIRECTORY / "own_data_manifest.csv"

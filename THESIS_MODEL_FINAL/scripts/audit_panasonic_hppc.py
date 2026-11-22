@@ -29,17 +29,11 @@ from models.ocp_panasonic_qi_frozen import (  # noqa: E402
     X_P_END,
     X_P_START,
 )
+from runtime_paths import PANASONIC_HPPC_PATH, require_data_file  # noqa: E402
 
 
-RAW_MANIFEST_PATH = Path(
-    r"C:\Users\amvel\Documents\Andes\2026-1\wykht8y7tg-1"
-    r"\Panasonic 18650PF Data\Panasonic 18650PF Data\25degC"
-    r"\5 pulse disch\03-11-17_08.47 25degC_5Pulse_HPPC_Pan18650PF.mat"
-)
-LOADED_CSV_PATH = Path(
-    r"C:\Users\amvel\Documents\Andes\Tesis\datasets\converted_csv"
-    r"\hppc_25C_converted.csv"
-)
+RAW_MANIFEST_PATH = PANASONIC_HPPC_PATH
+LOADED_CSV_PATH = PANASONIC_HPPC_PATH
 OUTPUT_DIRECTORY = REPOSITORY_ROOT / "thesis_data"
 
 REST_CURRENT_THRESHOLD_A = 0.05
@@ -70,7 +64,7 @@ class Segment:
 
 
 def load_hppc(path: Path = LOADED_CSV_PATH) -> HppcData:
-    table = np.genfromtxt(path, delimiter=",", names=True, dtype=float, encoding="utf-8")
+    table = np.genfromtxt(require_data_file(path), delimiter=",", names=True, dtype=float, encoding="utf-8")
     columns = tuple(table.dtype.names or ())
     required = {
         "Time",

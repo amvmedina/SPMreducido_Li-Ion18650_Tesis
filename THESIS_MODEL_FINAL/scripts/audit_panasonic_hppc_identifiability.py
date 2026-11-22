@@ -36,14 +36,12 @@ from models.ocp_panasonic_qi_frozen import (  # noqa: E402
     X_P_END,
     X_P_START,
 )
+from runtime_paths import PANASONIC_HPPC_PATH, require_data_file  # noqa: E402
 
 
 OUTPUT_DIRECTORY = REPOSITORY_ROOT / "thesis_data"
 PULSE_SUMMARY_PATH = OUTPUT_DIRECTORY / "panasonic_hppc_pulse_summary.csv"
-HPPC_CSV_PATH = Path(
-    r"C:\Users\amvel\Documents\Andes\Tesis\datasets\converted_csv"
-    r"\hppc_25C_converted.csv"
-)
+HPPC_CSV_PATH = PANASONIC_HPPC_PATH
 
 EXCLUDED_PULSE_IDS = frozenset({60, 64, 67})
 PARAMETER_NAMES = ("alpha_n", "alpha_p", "d_n", "d_p", "R0")
@@ -107,7 +105,7 @@ class LocalResult:
 
 
 def load_hppc_data(path: Path = HPPC_CSV_PATH) -> HppcData:
-    table = np.genfromtxt(path, delimiter=",", names=True, dtype=float, encoding="utf-8")
+    table = np.genfromtxt(require_data_file(path), delimiter=",", names=True, dtype=float, encoding="utf-8")
     names = set(table.dtype.names or ())
     required = {"Time", "Voltage", "Current", "Ah", "Battery_Temp_degC"}
     missing = required - names
@@ -138,7 +136,7 @@ def _parse_bool(value: str) -> bool:
 
 
 def load_pulse_records(path: Path = PULSE_SUMMARY_PATH) -> list[PulseRecord]:
-    with path.open(newline="", encoding="utf-8") as handle:
+    with require_data_file(path).open(newline="", encoding="utf-8") as handle:
         rows = list(csv.DictReader(handle))
     records = [
         PulseRecord(
